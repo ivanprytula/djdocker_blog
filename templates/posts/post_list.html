@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+<h1>This page can only be accessed by logged-in users.</h1>
+
+{% block content %}
+
+{% for post in object_list %}
+    <p>{{ post.title }}</p>
+    <p>By {{ post.author }}</p>
+    <p>Published {{ post.published_date }}</p>
+    <hr>
+{% empty %}
+    <p>No posts yet.</p>
+{% endfor %}
+
+{% endblock %}

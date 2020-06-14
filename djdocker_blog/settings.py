@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'users.apps.UsersConfig',
+    'posts.apps.PostsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -123,8 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # defines the location of static files in local development
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_ROOT, ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
