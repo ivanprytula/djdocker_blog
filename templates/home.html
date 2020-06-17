@@ -4,6 +4,7 @@
 
 {% block content %}
 
+    <h1>This is simple home page</h1>
     <div class="home-page">
         {% if user.is_authenticated %}
             Welcome, {{ user.email }}!
@@ -12,7 +13,7 @@
             </p>
 
             <p>
-                <a href="{% url 'posts:post_list' %}">See list of posts!</a>
+                <a href="{% url 'posts:post_new' %}" class="top-menu">Add new post</a>
             </p>
 
         {% else %}
@@ -21,5 +22,10 @@
             <a href="{% url 'users:signup' %}">Sign Up</a>
         {% endif %}
     </div>
+
+    <hr>
+    <p>
+        <a href="{% url 'posts:post_list' %}">See list of posts!</a>
+    </p>
 
 {% endblock %}

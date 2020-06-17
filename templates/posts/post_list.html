@@ -3,13 +3,18 @@
 
 {% block content %}
 
-{% for post in object_list %}
-    <p>{{ post.title }}</p>
-    <p>By {{ post.author }}</p>
-    <p>Published {{ post.published_date }}</p>
-    <hr>
-{% empty %}
-    <p>No posts yet.</p>
-{% endfor %}
+    <a href="{% url 'home' %}">Back to Homepage</a>
+
+
+    {% for post in object_list %}
+        <p class="post__title">{{ post.title }}</p>
+        <p>By {{ post.author }}</p>
+        <p>Published {{ post.published_date }}</p>
+        <p>{{ post.text|slice:":200" }}</p>
+        <a href="{% url 'posts:post_detail' post.slug %}">Read More</a>
+        <hr>
+    {% empty %}
+        <p>No posts yet.</p>
+    {% endfor %}
 
 {% endblock %}

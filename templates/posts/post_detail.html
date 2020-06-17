@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+    <a href="{% url 'posts:post_list' %}">Back to list</a>
+
+
+    <div>
+        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <p>{{ post.author }} | {{ post.created_date }}</p>
+        <p>{{ object.text | safe }}</p>
+    </div>
+
+{% endblock content %}

@@ -1,5 +1,5 @@
 body {
-  background-color: navajowhite;
+  background-color: silver;
   font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
   margin: 20px;
 }
@@ -8,11 +8,12 @@ h2, p, a, button {
   margin: 10px;
 }
 
-a:visited {
-  color: darkgoldenrod;
+a:hover {
+  text-decoration-color: blueviolet;
+  font-weight: bolder;
 }
 
-p {
-  font-weight: 600;
-  color: mediumslateblue;
+
+a:visited {
+  color: indianred;
 }
