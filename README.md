@@ -1,6 +1,8 @@
 # How to start?
+
+Clone repo. It's easy.  
+Next.  
 * Classic way:
-  - clone repo
   - in case you don't have *pipenv*: `$ pip install pipenv`
   - `$ pipenv install`
   - `$ ./manage.py migrate`
@@ -8,8 +10,14 @@
 
 * Docker way
  - clone repo
- - `$ docker build -t <your_name>/<app_name>:<tag> .`
- - `$ docker run -d -t 8001:8001 <your_name>/<app_name>:<tag>`
+   - `$ docker build -t <your_name>/<app_name>:<tag> .`
+   - `$ docker run -d -t 8001:8001 <your_name>/<app_name>:<tag>`
+   
+* docker-compose way
+   - `$ docker-compose build`
+   - `$ docker-compose up`
+   - `$ docker-compose down`
+
 
 
 
