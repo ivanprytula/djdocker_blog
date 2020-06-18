@@ -22,10 +22,11 @@ RUN pipenv install --system
 
 # copy project
 COPY . /usr/src/app_djdocker_blog/
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 # tell the port number the container should expose
-EXPOSE 8000
+EXPOSE 8001
 
 # run the command[s] == start app
-CMD ["python3", "manage.py", "migrate"]
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8001"]

@@ -1,9 +1,8 @@
-from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views import generic
 
-from .models import Post
 from .forms import PostForm
+from .models import Post
 
 
 class PostList(generic.ListView):
