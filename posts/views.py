@@ -7,7 +7,7 @@ from .models import Post
 
 class PostList(generic.ListView):
     context_object_name = 'filtered_post_list'
-    queryset = Post.objects.filter(created_date__lte=timezone.now())
+    queryset = Post.objects.all()
     template_name = 'posts/post_list.html'
 
 
