@@ -9,7 +9,7 @@ Next.
   - `$ ./manage.py runserver 8001`
 
 * Docker way
- - clone repo
+   - clone repo
    - `$ docker build -t <your_name>/<app_name>:<tag> .`
    - `$ docker run -d -t 8001:8001 <your_name>/<app_name>:<tag>`
    
